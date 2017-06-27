@@ -1,0 +1,22 @@
+name: layer-letsencrypt
+summary: Use certbot standalone for creating letsencrypt certificates
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+description: |
+  A layer for creating certifications via certbot in standalone mode. Charms which inherit 
+  from this will need to manage using the certificats.
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+subordinate: false
+series:
+  - xenial
+#provides:
+#  provides-relation:
+#    interface: interface-name
+#requires:
+#  requires-relation:
+#    interface: interface-name
+#peers:
+#  peer-relation:
+#    interface: interface-name

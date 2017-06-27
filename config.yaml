@@ -1,0 +1,27 @@
+options:
+  enable-letsencrypt:
+    type: boolean
+    default: False
+    description: "Enable use of letsencrypt"
+  letsencrypt-domains:
+    type: string
+    default: ""
+    description: "Comma delimited list of domains to register"
+  letsencrypt-email:
+    type: string
+    default: ""
+    description: "Email to register with letsencrypt"
+    
+#  string-option:
+#    type: string
+#    default: "Default Value"
+#    description: "A short description of the configuration option"
+#  boolean-option:
+#    type: boolean
+#    default: False
+#    description: "A short description of the configuration option"
+#  int-option:
+#    type: int
+#    default: 9001
+#    description: "A short description of the configuration option"
+

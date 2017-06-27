@@ -1,0 +1,18 @@
+includes: ['layer:basic']  # if you use any interfaces, add them here
+repo: git@github.com:chris-sanders/layer-letsencrypt.git
+defines:
+  # Danger this is not the same format as config.yaml!
+  # type: null, boolean, object, array, number, string
+  # see: http://json-schema.org/documentation.html
+  port:
+    type: integer
+    default: 9999
+    description: "Port to run letsencrypt standalone server on"
+  pre-hook:
+    type: string
+    default: ""
+    description: "Command to be run in a shell before obtaining any certificates"
+  post-hook:
+    type: string
+    default: ""
+    description: "Command to be run in a shell after attempting to obtain/renew certificates"
