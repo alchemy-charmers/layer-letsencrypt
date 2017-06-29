@@ -14,7 +14,7 @@ def install_letsencrypt():
     set_state('letsencrypt.installed')
 
 def register_domains():
-    ''' After forwarding the letsencrypt port, register current domains '''
+    ''' Register current domains via standalone method'''
     hookenv.log("letsencrypt register_domains() called","DEBUG")
     layer_config = layer.options('letsencrypt')
     charm_config = hookenv.config()
@@ -38,3 +38,8 @@ def register_domains():
                                                            post = layer_config['post-hook'],
                                                            email = email,
                                                            domains = charm_config['letsencrypt-domains']), shell=True)
+
+def renew():
+    ''' Runs a renew on existing certificates '''
+    hookenv.log("letsencrypt rewnew() called","DEBUG")
+    subprocess.call('certbot renew') 
