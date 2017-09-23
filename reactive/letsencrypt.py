@@ -44,4 +44,4 @@ def register_domains():
 def renew():
     ''' Runs a renew on existing certificates '''
     hookenv.log("letsencrypt rewnew() called", "DEBUG")
-    subprocess.call('certbot renew', shell=True) 
+    subprocess.call('certbot renew', shell=True)
